@@ -11,7 +11,8 @@ public class Target : MonoBehaviour
     public float KBF = 50; //Knockback Force
     public GameObject player;
     Rigidbody rb;
-    
+    public Score score;
+
 
     Vector3 velocity;
     bool isGrounded;
@@ -71,6 +72,7 @@ public class Target : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        score.AddScore(100);
     }
 
      void Update()

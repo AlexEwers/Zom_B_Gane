@@ -66,9 +66,12 @@
   <ItemGroup>
     <Compile Include="Assets\GenerateEnemies.cs" />
     <Compile Include="Assets\Gun Script\Gun.cs" />
+    <Compile Include="Assets\HealthBar.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\EnemyKB.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\HostileAI.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\Target.cs" />
+    <Compile Include="Assets\Models\Enemy Scripts\Test.cs" />
+    <Compile Include="Assets\Other UI Code\Score.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\2D\LoseSightWhenTargetsFallsOffThePlatform.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\2D\MouseScrollZoom2D.cs" />
