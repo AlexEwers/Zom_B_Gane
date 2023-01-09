@@ -64,15 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BeatZomLev.cs" />
     <Compile Include="Assets\GenerateEnemies.cs" />
     <Compile Include="Assets\Gun Script\Gun.cs" />
     <Compile Include="Assets\HealthBar.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\EnemyKB.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\HostileAI.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\Target.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\Test.cs" />
+    <Compile Include="Assets\Other UI Code\Score.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\2D\LoseSightWhenTargetsFallsOffThePlatform.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\2D\MouseScrollZoom2D.cs" />
@@ -111,7 +110,6 @@
     <Compile Include="Assets\Script for the Player\Respawn.cs" />
     <Compile Include="Assets\Script for the Player\TPMovementScript.cs" />
     <Compile Include="Assets\Script for the Player\knockback.cs" />
-    <Compile Include="Assets\UI Stuff\Score.cs" />
     <None Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\FadeOutNearbyObjects\FadeOut.shader" />
     <None Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
     <None Include="Assets\NavMeshComponents-master\ProjectSettings\ProjectVersion.txt" />
