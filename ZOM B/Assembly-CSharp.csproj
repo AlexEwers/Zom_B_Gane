@@ -65,6 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BeatZomLev.cs" />
+    <Compile Include="Assets\EndTrigger.cs" />
+    <Compile Include="Assets\EnemyPath.cs" />
     <Compile Include="Assets\GenerateEnemies.cs" />
     <Compile Include="Assets\Gun Script\Gun.cs" />
     <Compile Include="Assets\HealthBar.cs" />
@@ -73,7 +75,14 @@
     <Compile Include="Assets\Models\Enemy Scripts\HostileAI.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\Target.cs" />
     <Compile Include="Assets\Models\Enemy Scripts\Test.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
+    <Compile Include="Assets\SFPHostileAI.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\2D\LoseSightWhenTargetsFallsOffThePlatform.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\2D\MouseScrollZoom2D.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\3rdPersonWithAimMode\ActivateOnKeypress.cs" />
@@ -112,6 +121,8 @@
     <Compile Include="Assets\Script for the Player\TPMovementScript.cs" />
     <Compile Include="Assets\Script for the Player\knockback.cs" />
     <Compile Include="Assets\UI Stuff\Score.cs" />
+    <Compile Include="Assets\WaypointMover.cs" />
+    <Compile Include="Assets\Waypoints.cs" />
     <None Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\FadeOutNearbyObjects\FadeOut.shader" />
     <None Include="Assets\Samples\Cinemachine\2.9.1\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
     <None Include="Assets\NavMeshComponents-master\ProjectSettings\ProjectVersion.txt" />
@@ -697,6 +708,14 @@
     <ProjectReference Include="NavMeshComponentsExamples.csproj">
       <Project>{7ED6CFA3-3EBB-B1E8-946B-42C1C4A77811}</Project>
       <Name>NavMeshComponentsExamples</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{B20C15FF-62B0-AC67-AF29-461D63F3135C}</Project>
+      <Name>PathCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreatorEditor.csproj">
+      <Project>{FC59BD51-D4AA-7416-2A57-BD764798FE19}</Project>
+      <Name>PathCreatorEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
