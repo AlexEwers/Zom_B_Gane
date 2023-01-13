@@ -15,7 +15,7 @@ public class BeatZomLev : MonoBehaviour {
         enemies = GameObject.FindGameObjectsWithTag("Base_Enemy");
             if (enemies.Length == 0)
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level 2");
         }
         
     }

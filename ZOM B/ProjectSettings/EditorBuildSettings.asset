@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Main Levels/Main Level 1.unity
     guid: 3b169df85ef6cc74b829c869421719ed
   - enabled: 1
+    path: Assets/Main Levels/Level 2 Test/Level 2.unity
+    guid: 71f1c9a7e43136742a00d6f3c6b86021
+  - enabled: 1
     path: Assets/Main Levels/Finish Game.unity
     guid: f6e98f22549ecaa429d64d3e1ece85a8
   m_configObjects: {}
