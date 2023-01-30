@@ -22,7 +22,7 @@ public class Wave
 
     public Transform[] spawnpoints;
 
-    public float timeBetweenWaves = 5f;
+    public float timeBetweenWaves = 2f;
     public float waveCountdown;
 
     private float searchCountdown = 1f;
@@ -65,19 +65,27 @@ public class Wave
                 waveCountdown -= Time.deltaTime;
             }
         }
+        {
+            Debug.Log("Counting down time");
+            waveCountdown -= Time.deltaTime;
+        }
+
     }
 
     void WaveCompleted()
     {
         Debug.Log("Wave Completed");
-        nextWave++;
+        
+        state = SpawnState.Counting;
+        waveCountdown = timeBetweenWaves;
+
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
             Debug.Log("Completed All waves Looping");
         }
-        state = SpawnState.Counting;
-        waveCountdown = timeBetweenWaves;
+
+        nextWave++;
     }
 
     bool EnemyIsAlive()
@@ -86,7 +94,7 @@ public class Wave
         if (searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if (GameObject.FindGameObjectsWithTag("Base_Enemy") == null)
+            if (GameObject.FindGameObjectWithTag("Base_Enemy") == null)
             {
                 return false;
             }

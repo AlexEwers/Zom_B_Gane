@@ -1696,9 +1696,9 @@ MonoBehaviour:
   waves:
   - name: MY
     enemy: {fileID: 8037694463627605707, guid: 1d3f30c51537b4e4289da26730323bef, type: 3}
-    count: 2
-    rate: 1
-  - name: Dick
+    count: 1
+    rate: 3
+  - name: HOUSE
     enemy: {fileID: 8037694463627605707, guid: 1d3f30c51537b4e4289da26730323bef, type: 3}
     count: 2
     rate: 1
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   - {fileID: 14124214}
   - {fileID: 1082338246}
   timeBetweenWaves: 5
-  waveCountdown: 3
+  waveCountdown: 5
 --- !u!4 &1487254972
 Transform:
   m_ObjectHideFlags: 0

@@ -133,8 +133,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   KBF: 60
-  player: {fileID: 0}
-  score: {fileID: 0}
+  player: {fileID: 9071844583176685151, guid: 4e785997d9e3ada41b9d724de9e902fa, type: 3}
+  score: {fileID: 6872228309695859547, guid: 64b45a206fd432546b9afa2580a36389, type: 3}
   health: 50
 --- !u!136 &5352650919518745128
 CapsuleCollider:
