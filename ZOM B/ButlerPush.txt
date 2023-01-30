@@ -1,0 +1,1 @@
+butler push "D:\gun game\ZOM B\Github\Zom_B\ZOM B\zipfile" soopah/zom-b:win
