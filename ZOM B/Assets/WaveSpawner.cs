@@ -34,7 +34,7 @@ public class Wave
         waveCountdown = timeBetweenWaves;
         if (spawnpoints.Length == 0)
         {
-            Debug.LogError("No Spawn");
+            Debug.LogError("No Spawn points ref");
         }
     }
 
@@ -81,7 +81,7 @@ public class Wave
 
         if (nextWave + 1 > waves.Length - 1)
         {
-            nextWave = 0;
+            nextWave = -1; //If you using this code for Waves, put it as -1 cause this is the only way it starts at the 1st wave.... 
             Debug.Log("Completed All waves Looping");
         }
 
@@ -121,9 +121,8 @@ public class Wave
 
     void SpawnEnemy (Transform _enemy)
     {
-        Transform _sp = spawnpoints[Random.Range (0, spawnpoints.Length) ];
-
-        Instantiate(_enemy, transform.position, transform.rotation);
-        Debug.Log("Spawning Enemy:" + _enemy.name);
+        Transform _sp = spawnpoints[ Random.Range (0, spawnpoints.Length) ]; 
+        Instantiate(_enemy, _sp.position, transform.rotation); 
+        Debug.Log("Spawning Enemy:" + _enemy.name); 
     }
 }

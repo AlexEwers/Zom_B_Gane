@@ -29,6 +29,8 @@ public class Health : MonoBehaviour
         {
             Player.transform.position = respawnPoint.transform.position;
             Physics.SyncTransforms();
+            currenthealth = 3;
+            healthBar.SetMaxHealth(maxhealth);
         }
     }
 
