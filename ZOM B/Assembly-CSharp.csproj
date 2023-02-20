@@ -68,6 +68,7 @@
     <Compile Include="Assets\ChangeMaterialColour.cs" />
     <Compile Include="Assets\EndTrigger.cs" />
     <Compile Include="Assets\FinishGame.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\GenerateEnemies.cs" />
     <Compile Include="Assets\Gun Script\Gun.cs" />
     <Compile Include="Assets\HealthBar.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Assets\Script for the Player\TPMovementScript.cs" />
     <Compile Include="Assets\Script for the Player\knockback.cs" />
     <Compile Include="Assets\UI Stuff\Score.cs" />
+    <Compile Include="Assets\UIManager.cs" />
     <Compile Include="Assets\WaveSpawner.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

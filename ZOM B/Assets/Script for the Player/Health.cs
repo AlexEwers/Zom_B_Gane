@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Health : MonoBehaviour
     [SerializeField] private Transform Player;
     [SerializeField] private Transform respawnPoint;
     public HealthBar healthBar;
+    public int Deaths;
+
+    private UIManager UIManager;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +21,8 @@ public class Health : MonoBehaviour
         currenthealth = maxhealth;
         thePlayer = FindObjectOfType<PlayerMoves>();
         healthBar.SetMaxHealth(maxhealth);
+        UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+
     }
 
     public void TakeDamage(int amount)
@@ -31,6 +37,8 @@ public class Health : MonoBehaviour
             Physics.SyncTransforms();
             currenthealth = 3;
             healthBar.SetMaxHealth(maxhealth);
+            Deaths++;
+            UIManager.UpdateDeath(Deaths);
         }
     }
 

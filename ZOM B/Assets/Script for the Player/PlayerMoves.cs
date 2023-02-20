@@ -14,7 +14,6 @@ public class PlayerMoves : MonoBehaviour
     public LayerMask groundMask;
 
     public float KBF = 50; //KnockbackForce
-    public GameObject Base_Enemy;
     Rigidbody rb1;
     public Vector3 moveDirectionPush;
 
