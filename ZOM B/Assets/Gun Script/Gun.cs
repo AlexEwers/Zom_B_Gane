@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -21,10 +22,14 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 2f;
 
     private UIManager UIManager;
+    private GameObject ReloadingText;
 
     void Start()
     {
         UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        ReloadingText = GameObject.FindGameObjectWithTag("RELOADING");
+
+        ReloadingText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class Gun : MonoBehaviour
         if (currentAmmo <= 0)
         {
             StartCoroutine(Reload());
+            ReloadingText.SetActive(true);
             return;
             
         }
@@ -52,6 +58,7 @@ public class Gun : MonoBehaviour
         {
             StartCoroutine(Reload());
             Debug.Log("Forced Reload");
+            ReloadingText.SetActive(true);
         }
     }
 
@@ -64,7 +71,8 @@ public class Gun : MonoBehaviour
         currentAmmo = maxAmmo;
         isReloading = false;
         UIManager.UpdateAmmo(currentAmmo);
-
+        ReloadingText.SetActive(false);
+        
     }
 
 
