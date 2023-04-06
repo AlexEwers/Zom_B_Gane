@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\BeatZomLev.cs" />
     <Compile Include="Assets\ChangeMaterialColour.cs" />
+    <Compile Include="Assets\DamageFlash.cs" />
     <Compile Include="Assets\EndTrigger.cs" />
     <Compile Include="Assets\FinishGame.cs" />
     <Compile Include="Assets\GameManager.cs" />

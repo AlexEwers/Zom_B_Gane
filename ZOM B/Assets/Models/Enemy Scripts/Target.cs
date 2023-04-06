@@ -13,7 +13,11 @@ public class Target : MonoBehaviour
     Rigidbody rb;
     public Score score = new Score();
 
-    
+    MeshRenderer meshrenderer;
+    Color origColor;
+    float flashTime = .15f;
+
+
     Vector3 velocity;
     bool isGrounded;
 
@@ -22,10 +26,13 @@ public class Target : MonoBehaviour
      void Start()
     {
         rb = GetComponent<Rigidbody>();
+        meshrenderer = GetComponent<MeshRenderer>();
+        origColor = meshrenderer.material.color;
+
     }
 
 
-    
+
     private void OnTriggerEnter(Collider Collision)
     {
         if (Collision.gameObject.tag == "Player")
@@ -61,6 +68,7 @@ public class Target : MonoBehaviour
     public void TakeDamage (float amount)
     {
         health -= amount;
+        FlashStart();
         if (health <= 0f)
         {
             Destroy(gameObject);
@@ -79,8 +87,20 @@ public class Target : MonoBehaviour
         {
             velocity.y = -2f;
         }
-}
-    
+    }
+
+    void FlashStart()
+    {
+        meshrenderer.material.color = Color.black;
+        Invoke("FlashStop", flashTime);
+    }
+
+    void FlashStop()
+    {
+        meshrenderer.material.color = origColor;
+
+    }
+
 
 }
 
